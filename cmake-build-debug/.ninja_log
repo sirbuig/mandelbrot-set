@@ -1,0 +1,24 @@
+# ninja log v5
+1	28	1713814315702096030	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+32	51	1713814980205030104	mandelbrot_set	64d6cc8f3c00d700
+2	44	1713709144180911833	CMakeFiles/mandelbrot_set.dir/mandelbrot.c.o	aa3dbf7554233a21
+1	32	1713814980189030034	CMakeFiles/mandelbrot_set.dir/bmpfile.c.o	83c5d1753052b4a2
+1	28	1713815420914940314	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+1	30	1713815420918940331	CMakeFiles/mandelbrot_set.dir/bmpfile.c.o	83c5d1753052b4a2
+30	49	1713815420934940400	mandelbrot_set	64d6cc8f3c00d700
+1	28	1713815642568402297	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+1	29	1713815642572402331	CMakeFiles/mandelbrot_set.dir/bmpfile.c.o	83c5d1753052b4a2
+29	49	1713815642588402466	mandelbrot_set	64d6cc8f3c00d700
+1	28	1713815702952898631	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+28	56	1713815702980898856	mandelbrot_set	64d6cc8f3c00d700
+1	39	1713815804385682661	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+39	64	1713815804409682840	mandelbrot_set	64d6cc8f3c00d700
+1	29	1713815884902267118	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+1	37	1713815884910267175	CMakeFiles/mandelbrot_set.dir/bmpfile.c.o	83c5d1753052b4a2
+37	62	1713815884934267344	mandelbrot_set	64d6cc8f3c00d700
+0	28	1713815908998436340	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+28	50	1713815909022436508	mandelbrot_set	64d6cc8f3c00d700
+1	28	1713815953102739914	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
+29	49	1713815953122740050	mandelbrot_set	64d6cc8f3c00d700
+1	30	1713816057107427546	CMakeFiles/mandelbrot_set.dir/bmpfile.c.o	83c5d1753052b4a2
+30	50	1713816057127427675	mandelbrot_set	64d6cc8f3c00d700

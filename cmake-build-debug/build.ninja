@@ -49,23 +49,23 @@ cmake_ninja_workdir = /home/sig/Documents/mandelbrot-set/cmake-build-debug/
 
 build cmake_object_order_depends_target_mandelbrot_set: phony || CMakeFiles/mandelbrot_set.dir
 
-build CMakeFiles/mandelbrot_set.dir/main.c.o: C_COMPILER__mandelbrot_set_unscanned_Debug /home/sig/Documents/mandelbrot-set/main.c || cmake_object_order_depends_target_mandelbrot_set
-  DEP_FILE = CMakeFiles/mandelbrot_set.dir/main.c.o.d
+build CMakeFiles/mandelbrot_set.dir/src/main.c.o: C_COMPILER__mandelbrot_set_unscanned_Debug /home/sig/Documents/mandelbrot-set/src/main.c || cmake_object_order_depends_target_mandelbrot_set
+  DEP_FILE = CMakeFiles/mandelbrot_set.dir/src/main.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/mandelbrot_set.dir
-  OBJECT_FILE_DIR = CMakeFiles/mandelbrot_set.dir
+  OBJECT_FILE_DIR = CMakeFiles/mandelbrot_set.dir/src
 
-build CMakeFiles/mandelbrot_set.dir/mandelbrot.c.o: C_COMPILER__mandelbrot_set_unscanned_Debug /home/sig/Documents/mandelbrot-set/mandelbrot.c || cmake_object_order_depends_target_mandelbrot_set
-  DEP_FILE = CMakeFiles/mandelbrot_set.dir/mandelbrot.c.o.d
+build CMakeFiles/mandelbrot_set.dir/src/mandelbrot.c.o: C_COMPILER__mandelbrot_set_unscanned_Debug /home/sig/Documents/mandelbrot-set/src/mandelbrot.c || cmake_object_order_depends_target_mandelbrot_set
+  DEP_FILE = CMakeFiles/mandelbrot_set.dir/src/mandelbrot.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/mandelbrot_set.dir
-  OBJECT_FILE_DIR = CMakeFiles/mandelbrot_set.dir
+  OBJECT_FILE_DIR = CMakeFiles/mandelbrot_set.dir/src
 
-build CMakeFiles/mandelbrot_set.dir/bmpfile.c.o: C_COMPILER__mandelbrot_set_unscanned_Debug /home/sig/Documents/mandelbrot-set/bmpfile.c || cmake_object_order_depends_target_mandelbrot_set
-  DEP_FILE = CMakeFiles/mandelbrot_set.dir/bmpfile.c.o.d
+build CMakeFiles/mandelbrot_set.dir/src/bmpfile.c.o: C_COMPILER__mandelbrot_set_unscanned_Debug /home/sig/Documents/mandelbrot-set/src/bmpfile.c || cmake_object_order_depends_target_mandelbrot_set
+  DEP_FILE = CMakeFiles/mandelbrot_set.dir/src/bmpfile.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/mandelbrot_set.dir
-  OBJECT_FILE_DIR = CMakeFiles/mandelbrot_set.dir
+  OBJECT_FILE_DIR = CMakeFiles/mandelbrot_set.dir/src
 
 
 # =============================================================================
@@ -75,7 +75,7 @@ build CMakeFiles/mandelbrot_set.dir/bmpfile.c.o: C_COMPILER__mandelbrot_set_unsc
 #############################################
 # Link the executable mandelbrot_set
 
-build mandelbrot_set: C_EXECUTABLE_LINKER__mandelbrot_set_Debug CMakeFiles/mandelbrot_set.dir/main.c.o CMakeFiles/mandelbrot_set.dir/mandelbrot.c.o CMakeFiles/mandelbrot_set.dir/bmpfile.c.o
+build mandelbrot_set: C_EXECUTABLE_LINKER__mandelbrot_set_Debug CMakeFiles/mandelbrot_set.dir/src/main.c.o CMakeFiles/mandelbrot_set.dir/src/mandelbrot.c.o CMakeFiles/mandelbrot_set.dir/src/bmpfile.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/mandelbrot_set.dir
   POST_BUILD = :

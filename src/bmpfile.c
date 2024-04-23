@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
-#include "bmpfile.h"
+#include "../include/bmpfile.h"
 
 #define MAGIC_VALUE 0x4D42
 #define BITS_PER_PIXEL 24
@@ -14,11 +14,10 @@
 BMP_Image *BMP_init(int width, int height) {
     BMP_Image *img = malloc(sizeof(BMP_Image));
     if (!img) {
-        return NULL; // cleanUp function
+        return NULL;
     }
 
     int bytes_per_pixel = BITS_PER_PIXEL / BITS_PER_BYTE; // 24-bit BMP
-//    unsigned int data_size = width * height * bytes_per_pixel;
 
     img->header.type = MAGIC_VALUE;
     img->header.size = sizeof(BMP_Header) + (width * height * sizeof(RGB));
@@ -40,7 +39,6 @@ BMP_Image *BMP_init(int width, int height) {
     img->data_size = width * height * sizeof(RGB);
     img->width = width;
     img->height = height;
-//    img->bytes_per_pixel = bytes_per_pixel;
     img->data = malloc(img->data_size);
     if (!img->data) {
         BMP_destroy(img);

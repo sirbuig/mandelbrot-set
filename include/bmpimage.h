@@ -9,7 +9,6 @@ typedef struct {
     unsigned int data_size;
     unsigned int width;
     unsigned int height;
-//    unsigned int bytes_per_pixel;
     RGB *data;
 } BMP_Image;
 

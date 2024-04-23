@@ -5,6 +5,6 @@ typedef struct {
     unsigned int blue;
     unsigned int green;
     unsigned int red;
-} RGB; // in bitmap, the order actually is blue, green, red
+} RGB; // in bitmap the order is blue, green, red
 
 #endif //MANDELBROT_SET_RGB_H

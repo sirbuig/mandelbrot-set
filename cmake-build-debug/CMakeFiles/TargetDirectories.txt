@@ -1,3 +1,0 @@
-/home/sig/Documents/mandelbrot-set/cmake-build-debug/CMakeFiles/mandelbrot_set.dir
-/home/sig/Documents/mandelbrot-set/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/sig/Documents/mandelbrot-set/cmake-build-debug/CMakeFiles/rebuild_cache.dir

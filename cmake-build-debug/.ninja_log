@@ -1,9 +1,0 @@
-# ninja log v5
-1	53	1713881044028116931	CMakeFiles/mandelbrot_set.dir/main.c.o	e1ff2582ff42c771
-59	89	1713881044064116959	mandelbrot_set	64d6cc8f3c00d700
-1	39	1713880982032063492	CMakeFiles/mandelbrot_set.dir/mandelbrot.c.o	aa3dbf7554233a21
-1	59	1713881044036116937	CMakeFiles/mandelbrot_set.dir/bmpfile.c.o	83c5d1753052b4a2
-1	18	1713881109200160352	CMakeFiles/mandelbrot_set.dir/src/mandelbrot.c.o	825447a08b95e71a
-0	43	1713881109224160365	CMakeFiles/mandelbrot_set.dir/src/main.c.o	addcbeff6f47eb32
-1	48	1713881109232160370	CMakeFiles/mandelbrot_set.dir/src/bmpfile.c.o	5b94abce0051311a
-49	77	1713881109260160386	mandelbrot_set	3a7fe473f665af0b

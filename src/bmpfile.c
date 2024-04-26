@@ -17,10 +17,11 @@ BMP_Image *BMP_init(int width, int height) {
         return NULL;
     }
 
-    int bytes_per_pixel = BITS_PER_PIXEL / BITS_PER_BYTE; // 24-bit BMP
+    int bytes_per_pixel = sizeof(RGB);
+    unsigned int width_in_bytes = width * bytes_per_pixel;
 
     img->header.type = MAGIC_VALUE;
-    img->header.size = sizeof(BMP_Header) + (width * height * sizeof(RGB));
+    img->header.size = sizeof(BMP_Header) + width_in_bytes * height;
     img->header.reserved1 = 0;
     img->header.reserved2 = 0;
     img->header.offset = sizeof(BMP_Header);
@@ -30,7 +31,7 @@ BMP_Image *BMP_init(int width, int height) {
     img->header.planes = 1;
     img->header.bits = BITS_PER_PIXEL;
     img->header.compression = 0;
-    img->header.imagesize = width * height * sizeof(RGB);
+    img->header.imagesize = width_in_bytes * height;
     img->header.xresolution = PPM;
     img->header.yresolution = PPM;
     img->header.ncolors = 0;
@@ -44,7 +45,7 @@ BMP_Image *BMP_init(int width, int height) {
         BMP_destroy(img);
         return NULL;
     }
-    memset(img->data, 0, img->data_size);
+
     return img;
 }
 
@@ -58,10 +59,15 @@ int BMP_save(const BMP_Image *img, const char *filename) {
         fclose(fptr);
         return 0;
     }
-    if (fwrite(img->data, sizeof(RGB), img->width * img->height, fptr) != (img->width * img->height)) {
-        fclose(fptr);
-        return 0;
+
+    unsigned char padding[3] = {0, 0, 0};
+    unsigned int padding_size = (4 - (img->width * 3) % 4) % 4;
+
+    for (unsigned int i = 0; i < img->height; i++) {
+        fwrite(img->data + (img->width * i), img->width * sizeof(RGB), 1, fptr);
+        fwrite(padding, padding_size, 1, fptr);
     }
+
     fclose(fptr);
     return 1;
 }

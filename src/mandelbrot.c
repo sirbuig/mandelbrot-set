@@ -8,7 +8,7 @@
 #define MAX_Y 1.12
 #define MAX_ITERATION 1000
 
-void mandelbrot(BMP_Image *img) {
+void mandelbrot(BMP_Image *img, const ZOOM *zoom) {
     RGB *palette = (RGB *) malloc(MAX_ITERATION * sizeof(RGB));
     for (unsigned int c = 0; c < MAX_ITERATION; c++) {
         palette[c].red = (unsigned char) (255 * c / MAX_ITERATION);
@@ -16,10 +16,13 @@ void mandelbrot(BMP_Image *img) {
         palette[c].blue = (unsigned char) (255 * (MAX_ITERATION - c) / MAX_ITERATION);
     }
 
+    double rangeX = 2.47 / zoom->scale;
+    double rangeY = 2.24 / zoom->scale;
+
     for (unsigned int i = 0; i < img->height; i++) {
         for (unsigned int j = 0; j < img->width; j++) {
-            double x0 = (j / (double)img->width) * (MAX_X - MIN_X) + MIN_X;
-            double y0 = (i / (double)img->height) * (MAX_Y - MIN_Y) + MIN_Y;
+            double x0 = (j / (double)img->width) * rangeX + (zoom->centerX - rangeX / 2);
+            double y0 = (i / (double)img->height) * rangeY + (zoom->centerY - rangeY / 2);
 
             double x, y, aux;
             unsigned int iteration = 0;

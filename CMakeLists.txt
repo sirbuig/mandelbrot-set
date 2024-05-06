@@ -11,4 +11,5 @@ add_executable(mandelbrot_set src/main.c
         src/bmpfile.c
         include/bmpfile.h
         include/rgb.h
+        include/zoom.h
 )
